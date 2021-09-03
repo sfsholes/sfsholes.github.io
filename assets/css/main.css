@@ -110,9 +110,13 @@ input, select, textarea {
 		-webkit-transition: color 0.2s ease-in-out, border-color 0.2s ease-in-out;
 		-ms-transition: color 0.2s ease-in-out, border-color 0.2s ease-in-out;
 		transition: color 0.2s ease-in-out, border-color 0.2s ease-in-out;
-		border-bottom: dotted 1px;
+		target: _blank
 		color: #49bf9d;
 		text-decoration: none;
+	}
+
+	.nodots{
+		border-bottom: none;
 	}
 
 		a:hover {
@@ -125,6 +129,14 @@ input, select, textarea {
 		color: #787878;
 		font-weight: 600;
 		font-size: 2.2em;
+	}
+
+	.tstrong{
+		font-size: 1.1em;
+	}
+
+	.date{
+		font-size: 1em;
 	}
 
 	em, i {
@@ -2366,11 +2378,11 @@ input, select, textarea {
 
 	.table-wrapper {
 		-webkit-overflow-scrolling: touch;
-		overflow-x: auto;
+		overflow-x: visible;
 	}
 
 	table {
-		margin: 0 0 2em 0;
+		margin: 0 0 0 0;
 		width: 100%;
 	}
 
@@ -2380,12 +2392,39 @@ input, select, textarea {
 			border-right: 0;
 		}
 
-			table tbody tr:nth-child(2n + 1) {
+		.top{
+			border-bottom: 0;
+		}
+
+		.bottom{
+			border-top: 0;
+			line-height: 1.3em;
+		}
+
+			table tbody tr:nth-child(4n), table tbody tr:nth-child(4n - 1) {
 				background-color: #f7f7f7;
 			}
 
 		table td {
-			padding: 0.75em 0.75em;
+			vertical-align: top;
+			font-size: 0.8em;
+		}
+
+		.ttop{
+			padding-top: 0.75em;
+			padding-bottom: 0em;
+		}
+
+		.tbottom{
+			padding-top: 0.1em;
+			padding-bottom: 0.75em;
+		}
+
+		.title{
+			color: #787878;
+			font-weight: 600;
+			font-size: 1.1em;
+			padding-right: 0.1em;
 		}
 
 		table th {
@@ -2398,6 +2437,7 @@ input, select, textarea {
 
 		table thead {
 			border-bottom: solid 2px #efefef;
+			text-align: center;
 		}
 
 		table tfoot {
